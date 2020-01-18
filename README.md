@@ -139,7 +139,7 @@ sh install_timelord.sh
 #Only for Amazon Linux 2
 sudo amazon-linux-extras install epel
 
-sudo yum install gmp-devel mpfr-devel
+sudo yum install gmp-devel
 
 # Install Boost 1.72.0
 wget https://dl.bintray.com/boostorg/release/1.72.0/source/boost_1_72_0.tar.gz
@@ -147,11 +147,6 @@ tar -zxvf boost_1_72_0.tar.gz
 cd boost_1_72_0
 ./bootstrap.sh --prefix=/usr/local
 sudo ./b2 install --prefix=/usr/local --with=all; cd ..
-
-# Install Flint2
-git clone https://github.com/wbhart/flint2
-cd flint2; ./configure; sudo make install; cd ..
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 cd chia-blockchain
 
@@ -175,11 +170,9 @@ sudo apt-get install libboost1.70 libboost1.70-dev
 
 ### MacOS
 ```bash
-brew install boost gmp mpir mpfr
+brew install boost gmp
 
 cd chia-blockchain
-
-git clone https://github.com/wbhart/flint2
 
 sh install_timelord.sh
 ```
