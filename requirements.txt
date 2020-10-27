@@ -15,7 +15,7 @@ chardet==3.0.4
 Click==7.0
 colorlog==4.1.0
 cppimport==18.11.8
-cryptography==2.8
+cryptography==3.2
 entrypoints==0.3
 flake8==3.7.9
 idna==2.8
